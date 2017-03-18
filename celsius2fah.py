@@ -11,7 +11,7 @@ def c_to_f(c):
     fah= c *9/5+32
     if fah < -273.15:
         print ("Below Absolute Zero: Impossible temp")
-    print (fah)
+    print ("{} degrees celsius converts to {} degrees fahrenheit".format(c,fah))
 
 def calcTemp():
     while True:
@@ -23,7 +23,7 @@ while True:
     try:
         calcTemp()
     except ValueError:
-        print('Use Integers only please')
+        print('Error: Use Integers only please')
         continue
 
 
