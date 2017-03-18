@@ -18,8 +18,9 @@ def calcTemp():
         inputTemp = int(input("Please input temperature in Celsius for conversion: "))
         c_to_f(inputTemp)
         
-
+try:
 calcTemp()
-
+except:
+    continue
 
 
