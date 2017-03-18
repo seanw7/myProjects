@@ -13,7 +13,7 @@ def c_to_f(c):
         print ("Below Absolute Zero: Impossible temp")
     print ("{} degrees celsius converts to {} degrees fahrenheit".format(c,fah))
 
-def calcTemp():
+def calcInput():
     while True:
         inputTemp = int(input("Please input temperature in Celsius for conversion: "))
         c_to_f(inputTemp)
@@ -21,7 +21,7 @@ def calcTemp():
 while True:
     print('Calculator Initialized')
     try:
-        calcTemp()
+        calcInput()
     except ValueError:
         print('Error: Use Integers only please')
         continue
