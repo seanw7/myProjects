@@ -17,10 +17,13 @@ def calcTemp():
     while True:
         inputTemp = int(input("Please input temperature in Celsius for conversion: "))
         c_to_f(inputTemp)
-        
-try:
-calcTemp()
-except:
-    continue
+
+while True:
+    print('Calculator Initialized')
+    try:
+        calcTemp()
+    except ValueError:
+        print('Use Integers only please')
+        continue
 
 
