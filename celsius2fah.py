@@ -11,15 +11,19 @@ def c_to_f(c):
     fah= c *9/5+32
     if fah < -273.15:
         print ("Below Absolute Zero: Impossible temp")
-    print (fah)
+    print ("{} degrees celsius converts to {} degrees fahrenheit".format(c,fah))
 
-def calcTemp():
+def calcInput():
     while True:
         inputTemp = int(input("Please input temperature in Celsius for conversion: "))
         c_to_f(inputTemp)
-        
 
-calcTemp()
-
+while True:
+    print('Calculator Initialized')
+    try:
+        calcInput()
+    except ValueError:
+        print('Error: Use Integers only please')
+        continue
 
 
