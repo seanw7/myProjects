@@ -1,0 +1,45 @@
+-- Table: public.plants
+
+-- DROP TABLE public.plants;
+
+CREATE TABLE public.plants
+(
+    id serial NOT NULL,
+    botanical_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    common_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    pot_size integer,
+    owner character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT plants_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.plants
+    OWNER to postgres;
+
+
+
+
+-- Table: public.users
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users
+(
+    id SERIAL NOT NULL,
+    name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT users_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.users
+    OWNER to postgres;
+COMMENT ON TABLE public.users
+    IS 'users table
+';
