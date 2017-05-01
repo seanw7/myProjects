@@ -15,7 +15,7 @@ def normalCam():
 	camera.resolution = (1920,1080)
         camera.vflip = True
 	sleep(2)
-        Photoname = strftime("%Y-%m-%d--%H:%M:%s")
+        Photoname = strftime("%Y_%m_%d_%H_%M_%s")
         camera.capture('/home/pi/Pictures/{}.jpg'.format(Photoname))
         print('NormalFilter: Captured {}'.format(Photoname))
         sleep(10)# wait 5 minutes
