@@ -15,8 +15,8 @@ def normalCam():
 	camera.resolution = (1920,1080)
         camera.vflip = True
 	sleep(2)
-        Photoname = strftime("%Y-%m-%d--%H:%M:%s")
-        camera.capture('/home/pi/Pictures/{}.jpg'.format(Photoname))
+        Photoname = strftime("%Y_%m_%d_%H_%M_%s")
+        camera.capture('/home/pi/Pictures/{}_{}.jpg'.format(Photoname, count))
         print('NormalFilter: Captured {}'.format(Photoname))
         sleep(10)# wait 5 minutes
 
@@ -37,8 +37,8 @@ def lowLightCam():
         # Finally, capture an image with a 6s exposure. Due
         # to mode switching on the still port, this will take
         # longer than 6 seconds
-        Photoname = strftime("%Y-%m-%d--%H:%M:%s")
-        camera.capture('/home/pi/Pictures/{}.jpg'.format(Photoname))
+        Photoname = strftime("%Y_%m_%d_%H_%M_%s")
+        camera.capture('/home/pi/Pictures/{}_{}.jpg'.format(Photoname, count))
         print("LowLightFilter: Captured {}".format(count))
 
 def hourCheck():
