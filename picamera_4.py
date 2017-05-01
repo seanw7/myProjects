@@ -12,7 +12,7 @@ count = 1
 def normalCam():
     with PiCamera() as camera:
     #camera.start_preview()
-	camera.resolution = (1920,1080)
+        camera.resolution = (1920,1080)
         sleep(2)
         Photoname = strftime("%Y_%m_%d_%H_%M_%s")
         camera.capture('/home/pi/Pictures/{} {}.jpg'.format(Photoname, count))
