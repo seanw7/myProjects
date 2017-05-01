@@ -14,6 +14,7 @@ def normalCam():
     #camera.start_preview()
 	camera.resolution = (1920,1080)
         camera.vflip = True
+        camera.hflip = True
 	sleep(2)
         Photoname = strftime("%Y_%m_%d_%H_%M_%s")
         camera.capture('/home/pi/Pictures/{} {}.jpg'.format(Photoname, count))
@@ -24,6 +25,7 @@ def normalCam():
 def lowLightCam():
     with PiCamera() as camera:
 	camera.vflip = True
+	camera.hflip = True
         camera.resolution = (1920, 1080)
         # Set a framerate of 1/6fps, then set shutter
         # speed to 6s and ISO to 800
