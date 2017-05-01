@@ -5,8 +5,8 @@ from datetime import datetime, time, tzinfo, timedelta
 import requests
 
 
-t = localtime()
-localHour = t[3]
+#t = localtime()
+#localHour = t[3]
 count = 1
 
 def normalCam():
