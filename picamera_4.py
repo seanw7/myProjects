@@ -13,7 +13,9 @@ def normalCam():
     with PiCamera() as camera:
     #camera.start_preview()
         camera.resolution = (1920,1080)
+        camera.iso = 200
         sleep(2)
+        camera.shutter_speed = camera.exposure_speed
         Photoname = strftime("%Y_%m_%d_%H_%M_%s")
         camera.capture('/home/pi/Pictures/{} {}.jpg'.format(Photoname, count))
         print('NormalFilter: Captured {}'.format(Photoname))
